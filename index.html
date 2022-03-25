@@ -39,14 +39,19 @@
     <!-- A jumbotron -->
     <header class = "jumbotron">
         <div class="container">
-            <div class="row row-header">
+            <div class="row row-header align-items-center">
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3">
                     <img class="img-fluid" src="img/logo.png" alt="logo 404">
                 </div>
+                <div class="col-12 col-sm-3">
+                    <button type="button" class="btn btn-block btn-sm btn-warning" onclick="window.location.href='#reservetable'">
+                        Reserve Table
+                    </button>
+                </div>   
             </div>
         </div>
     </header>
@@ -60,7 +65,7 @@
                 <div class="media">
                     <img src="img/uthappizza.png" alt="uthappizza 404" class="d-flex mr-3 img-thumbnail align-self-center">
                     <div class="media-body">
-                        <h2 class="mt-0">Uthappizza</h2>
+                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span> </h2>
                         <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
                 </div>
@@ -73,8 +78,13 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col-12 col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img src="img/buffet.png" alt="buffet 404" class="d-flex ml-3 img-thumbnail align-self-center">
+                </div>
             </div>
         </div>
 
@@ -89,6 +99,51 @@
                         <h2>Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
                         <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reservetable" class="row row-content justify-content-center">
+            <div class="col-12 col-sm-8">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="guestcount" class="col-sm-3 col-form-label">Number of Guests</label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="guestcount" id="guestcount1" value="1">
+                                    <label for="guestcount1">1 &nbsp;</label>
+                                    <input type="radio" name="guestcount" id="guestcount2" value="2">
+                                    <label for="guestcount2">2 &nbsp;</label>
+                                    <input type="radio" name="guestcount" id="guestcount3" value="3">
+                                    <label for="guestcount3">3 &nbsp;</label>
+                                    <input type="radio" name="guestcount" id="guestcount4" value="4">
+                                    <label for="guestcount4">4 &nbsp;</label>
+                                    <input type="radio" name="guestcount" id="guestcount5" value="5">
+                                    <label for="guestcount5">5 &nbsp;</label>
+                                    <input type="radio" name="guestcount" id="guestcount6" value="6">
+                                    <label for="guestcount6">6</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="datetime" class="col col-sm-3 col-form-label">Date and Time</label>
+                                <div class="col-12 col-sm-4">
+                                    <input type="text" class="form-control" name="date" id="date" placeholder="Date">
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <input type="text" class="form-control" name="time" id="time" placeholder="Time">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-sm-3 col-sm-9">
+                                    <button type="submit" class="btn btn-primary">
+                                        Reserve
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
