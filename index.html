@@ -79,6 +79,64 @@
         </div>
     </div>
 
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="guestcount" class="col-sm-3 col-form-label">Number of Guests</label>
+                            <div class="col-sm-9">
+                                <input type="radio" name="guestcount" id="guestcount1" value="1">
+                                <label for="guestcount1">1 &nbsp;</label>
+                                <input type="radio" name="guestcount" id="guestcount2" value="2">
+                                <label for="guestcount2">2 &nbsp;</label>
+                                <input type="radio" name="guestcount" id="guestcount3" value="3">
+                                <label for="guestcount3">3 &nbsp;</label>
+                                <input type="radio" name="guestcount" id="guestcount4" value="4">
+                                <label for="guestcount4">4 &nbsp;</label>
+                                <input type="radio" name="guestcount" id="guestcount5" value="5">
+                                <label for="guestcount5">5 &nbsp;</label>
+                                <input type="radio" name="guestcount" id="guestcount6" value="6">
+                                <label for="guestcount6">6</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="smoke-check" class="col-sm-3 col-form-label">Section</label>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="section-options" id="non-smoking" autocomplete="off" checked> Non-Smoking 
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="section-options" id="smoking" autocomplete="off"> Smoking 
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="datetime" class="col col-sm-3 col-form-label">Date and Time</label>
+                            <div class="col-12 col-sm-4">
+                                <input type="text" class="form-control" name="date" id="date" placeholder="Date">
+                            </div>
+                            <div class="col-12 col-sm-5">
+                                <input type="text" class="form-control" name="time" id="time" placeholder="Time">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cancel </button>
+                    <button type="submit" class="btn btn-primary"> Reserve </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- A jumbotron -->
     <header class = "jumbotron">
         <div class="container">
@@ -91,9 +149,7 @@
                     <img class="img-fluid" src="img/logo.png" alt="logo 404">
                 </div>
                 <div class="col-12 col-sm-3">
-                    <button type="button" class="btn btn-block btn-sm btn-warning" data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+852 1237364</strong>" data-placement="bottom" onclick="window.location.href='#reservetable'">
-                        Reserve Table
-                    </button>
+                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-sm btn-warning" href="#reservetable">Reserve Table</a>
                 </div>   
             </div>
         </div>
@@ -160,7 +216,6 @@
             </div>
         </div>
 
-
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
@@ -187,51 +242,6 @@
                         <h2>Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
                         <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="reservetable" class="row row-content justify-content-center">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="guestcount" class="col-sm-3 col-form-label">Number of Guests</label>
-                                <div class="col-sm-9">
-                                    <input type="radio" name="guestcount" id="guestcount1" value="1">
-                                    <label for="guestcount1">1 &nbsp;</label>
-                                    <input type="radio" name="guestcount" id="guestcount2" value="2">
-                                    <label for="guestcount2">2 &nbsp;</label>
-                                    <input type="radio" name="guestcount" id="guestcount3" value="3">
-                                    <label for="guestcount3">3 &nbsp;</label>
-                                    <input type="radio" name="guestcount" id="guestcount4" value="4">
-                                    <label for="guestcount4">4 &nbsp;</label>
-                                    <input type="radio" name="guestcount" id="guestcount5" value="5">
-                                    <label for="guestcount5">5 &nbsp;</label>
-                                    <input type="radio" name="guestcount" id="guestcount6" value="6">
-                                    <label for="guestcount6">6</label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="datetime" class="col col-sm-3 col-form-label">Date and Time</label>
-                                <div class="col-12 col-sm-4">
-                                    <input type="text" class="form-control" name="date" id="date" placeholder="Date">
-                                </div>
-                                <div class="col-12 col-sm-5">
-                                    <input type="text" class="form-control" name="time" id="time" placeholder="Time">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-sm-3 col-sm-9">
-                                    <button type="submit" class="btn btn-primary">
-                                        Reserve
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -285,11 +295,5 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function (){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
-
 </html>
